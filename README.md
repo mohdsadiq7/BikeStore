@@ -3,7 +3,7 @@ A Bike Accessories and customized bikes shopping website built using HTML, CSS, 
 
 Clone the repository on desktop
  
-open command prompt,
+open command prompt, 
 Download Python3 or above in your system
 download PiP3 from the command Prompt
 Using PiP3 install the following for the python code to work
