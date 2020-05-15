@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessories</title>
+    <link rel="icon" href="{{url_for('static',filename='images/logo.jpg')}}" type=image/x-icon>
+  </head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+<!-- Pagination CSS  -->
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: center;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+body {font-family: "Lato", sans-serif}
+.mman{
+  float: right;
+}
+</style>
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-orange w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    </div>
+  </div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+</div>
+
+<center><h1 style="font-size: 1in;"><bold><i>Accessories</i></bold></h1></center>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj3')}}" ><img src="{{url_for('static',filename='images/one.jpg')}}" alt="Sandwich" style="width:100%"></a>
+     <h3>MOTOTECH Scrambler Air Motorcycle Riding Jacket - Combo Colors</h3>
+      <!-- <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj4')}}" ><img src="{{url_for('static',filename='images/five.jpg')}}" alt="Steak" style="width:85%"></a>
+      <h3>AutoStark Pro Biker Bike Riding Full Gloves (Size,Colour) Variation (XL, Blue)</h3>
+      <!-- <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj5')}}" ><img src="{{url_for('static',filename='images/four.jpg')}}" alt="Cherries" style="width:100%"></a>
+      <h3>Probiker Leather Motorcycle Riding Gloves (Red, L)</h3>
+      <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      <!-- <p>What else?</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj6')}}" ><img src="{{url_for('static',filename='images/three.jpg')}}" alt="Pasta and Wine" style="width:65%"></a>
+      <h3>Inditradition 13 in 1 Multifunctional Bicycle Repair Toolkit | Complete Tool Set for Bikes (Steel)</h3>
+      <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+  </div>
+  <pre>
+
+
+
+  </pre>
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj7')}}" ><img src="{{url_for('static',filename='images/two.jpg')}}" alt="Popsicle" style="width:100%"></a>
+      <h3>Just Rider Unisex Full Sleeve Plain Athletic Fit Multi Sports Compression T-Shirt (Black, 3XL)</h3>
+      <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj8')}}" ><img src="{{url_for('static',filename='images/seven.jpg')}}" alt="Salmon" style="width:60%"></a>
+      <h3>Sheeba SCAIO07 All-in-One Multipurpose Liquid Polish (200 ml)</h3>
+      <!-- <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj9')}}" ><img src="{{url_for('static',filename='images/six.jpg')}}" alt="Sandwich" style="width:115%;"></a>
+      <pre>
+
+      </pre><h3>DESTELLO X-Grip Bike USB Mobile Holder with Charger Port</h3>
+      <!-- <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <a href="{{url_for('manoj10')}}" ><img src="{{url_for('static',filename='images/eight.jpg')}}" alt="Croissant" style="width:95%"></a>
+      <pre>
+
+
+      </pre><h3>Fashion Sutra Men's Nylon Half Finger Hard Knuckle Motorcycle Arm Shooting Gym Gloves</h3>
+      <!-- <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+  </div>
+  
+  <!-- 
+    Pagination 
+    <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="acc.html" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="{{url_for('manoj')}}" class="w3-bar-item w3-black w3-button">2</a>
+      <a href="acc3.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div> -->
+  <center>
+  <div class="pagination">
+  
+    <a href="#" class="active">1</a>
+    <a href="{{url_for('manoj')}}" >2</a>
+    <!-- <a href="#">3</a> -->
+
+  </div>
+</center>
+  <hr id="about">
+
+</div>
+
+<script>
+    
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="icon" href="{{url_for('static',filename='images/logo.jpg')}}" type=image/x-icon>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid orange;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: orange;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+    <body id="top">
+        
+    <!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-orange w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    </div>
+</div>
+  
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  </div>
+  
+  <!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  
+
+    <div class="w3-container w3-white w3-center w3-padding-32" style="max-width:2000px" id="aboutus">
+        <h2 class="w3-wide">OUR EVENTS</h2>
+        <p class="w3-opacity"><i>Join us on the various events organized by us</i></p>
+        <p class="w3-justify">We organize various events from our store in the respective cities. The events may be some casual bike meet ups related to some particular bikes
+           or may be some casual meetups for all our customers. The event may also be an launch event of any of our customized biks built by us. The events may also be bike roads
+           trips organized by particular stores.<br/>As we have organized a lot of events in the past since our stores have been opened we stick to our culture and go on arranging a 
+           lot of events every year. We have done a lot of events such as meetups, trips and much more which include road trip to Kashmir, Nepal, Gujarat, Kanyakumari, Pondicherry,
+           Karwar, Goa and many more places. We also had meetups related to Harely Davidson motor company and Royal Enfield at Mumbai, Goa, Chennai and New Delhi. We also had coffee 
+           meetups for Triumph and KTM bikers at our Bangalore and Hyderabad stores.<br/>We also had some launch events of our customized bikes at our Mysore and Hyderabad stores which
+           developed and created a lot of enthusiasm among the whole nation, to which we received a very good response with a large crowd attending the event. <br/>
+           Here we have some quite fascinating and expert organizers with us who help us arrange and organize all the things that are needed for trips and meetups from food,
+           stay, hotels, activities and all the necessary stuff.
+      </p>
+    </div> 
+    
+    <div class="w3-container w3-content w3-black w3-center w3-padding-32" style="max-width:500px" id="aboutus">
+        <h3 class="w3-opacity"><i>Please kindly note on some of the points :</i></h3>
+        <p class="w3-justify">1. This website provides you only the details of the events.<br/>
+            2. Inorder to attend any meetup or join any events organized by us you need to visit the respective store which is organizing the event.<br/>
+            3. You need to provide all the necessary documents of the rider and the bike at the respective store which is organizing the event at the time of registration.<br/>
+            4. Following of all the guidelines and instructions given by the organizer is must.<br/>
+            5. All details are for security reasons and will be maintained by the company during the ride.<br/>
+            6. Bringing of bikes during the registring of an event is compulsory.<br/>
+        </p>
+    </div>
+
+    <div class="w3-container w3-white w3-center w3-padding-16" style="max-width:2000px" id="aboutus">
+    </div>
+
+ <div class="timeline">
+  <div class="container left">
+    <div class="content">
+        <h2>Kashmir Bike Trip<h6>Kick off : <i>Nov-10-2020</i></h6></h2>
+        <h3>Hosted by The Bike store, New Delhi.</h3>
+        <p>This trip is open for all the bikers with high powered bikes. We kick of from our bike store at New Delhi on Nov 10 2020. The route will be starting from delhi
+          via panipat, kurukshetra, chandigarh, mandi, manali, tandi and leh. The to and fro trip will include on and around 12 days. We will be covering whole of the Leh, manali, mandi, kullu and most of the parts of Himachal pradesh and kashmir.
+          Visting waterfalls, hill stations, snowy areas, peaks, Lakes, towns and the most dangerous pases and off course himalayas riding across them.
+          All the necessary arrangements from food to stay and lodging at quite exqusite places and extra activities like sporty and fun events at the places will be organized by the organizer.
+          The Expense of this trip and all the necessary details will be available and explained by our organizer at our New delhi bike store.</p>
+      <p>Intrested people can visit our Bike store at New Delhi and enroll by providing the necessary documents of yours and your bike asap.<br/>As we have limited number of seats.</p>
+      <h4>NOTE : </h4><i>Its a long trip riding through some high steepy roads and deadly passes which requires a lot of expertise and skills and powerful bikes. 
+        So visit the store study all the guidelines and details. And it would be good if you own bikes like Royal Enfield himalayan, classic 350, Harley, Gixxer or any other powerful bike and do the registration. </i>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+        <h2>Mumbai - Chikmagalur Bike Trip<h6>Kick off : <i>Sep-19-2020</i></h6></h2>
+        <h3>Organised by The Bike store, Mumbai.</h3>
+        <p>This trip is open for all the bikers and all types of bikes. We will be starting our journey from our Mumbai Source point to chikmaglur district of karnataka. The route will be starting from mumbai 
+          via Pune, Kolhapur, belgaum and dharwad to chikmaglur. The to and fro trip will include 6 days and 5 nights. All the necessary arrangements from food to stay and other extra fun and sporty activities at the destinations will be organized by the organizer.
+          We will be visiting the whole chikmaglur district with its hill stations, nature parks, peaks, waterfalls and much more places.
+          The Expense of this trip will be costing around 30,000 INR. For more necessary details visit our Mumbai store where our organizer will be providing you with all required information. </p>
+        <p>Intrested people can visit our store and enroll with the necessary documents asap.<br/>As we have limited number of seats.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+        <h2>Leh - Manali Bike Trip<h6>Kick off : <i>Aug-07-2020</i></h6></h2>
+        <h3>Hosted by The Bike store, Kolkata.</h3>
+        <p>This trip is open for all the bikers with high powered bikes. We kick of from our bike store at kolkata on August 12 2020. The route will be 
+          via Aurangabad, Lucknow, Agra and chandigarh. The to and fro trip will include on and around 20 days. We will be covering whole of the Leh, manali and most of the parts of Himachal pradesh.
+          Visting waterfalls, hill stations and hilly and snowy areas.
+          All the necessary arrangements from food to stay and Extra activities will be organized by the organizer.
+          The Expense of this trip and all the necessary details will be available and explained by our organizer at our Kolkata bike store.</p>
+      <p>Intrested people can visit our Bike store at Kolkata and enroll by providing the necessary documents asap.<br/>As we have limited number of seats.</p>
+      <h4>NOTE : </h4><i>Its a long trip. So visit the store study all the guidelines. And it would be good if people with powerful bikes register. </i>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+        <h2>Meetup Goa - Harley Davidson<h6>Meetup on : <i>June-25-2020</i></h6></h2>
+        <p>This meet up is only for the Harley Motor bike owners. The meet up will be a one day event held at The Beach Resort, Baga. It will be a fun event where you will be meeting a lot of 
+            bike enthusiasts and experts from the whole India who will auto show a lot of harley company and customized bikes. As the resort will be back of baga beach we will be organizing a ot of sports and events.
+          The meetup will comprise of a day at the resort, sport activities and other fun events and will be costing 5,000 INR.</p>
+      <p>Intrested people can visit our nearby bike stores and enroll with the necessary details.</p>
+      <h4>NOTE : </h4><i>Only for Harley Davidson Bikers.</i>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Trip Coorg in an Royal Enfield<h6>Kick off : <i>Mar-12-2020</i></h6></h2>
+      <h3>Hosted by The Bike store, Bangalore.</h3>
+      <p>This trip is open only for the bikers with Royal Enfield bikes. The journey starts from bangalore Source point to Coorg. The route will be 
+        via mysore, kushalnagar. The to and fro trip will include 5 days and 4 nights. We will be covering whole of the coorg district visiting the various hill stations and waterfalls and various towns of coorg. 
+        All the necessary arrangements from food to stay and Extra activities will be organized by the organizer.
+        The Expense of this trip will be 20,000 INR.</p>
+    <p>Intrested people can visit our store and enroll with the necessary documents asap.<br/>As we have limited number of seats.</p>
+    <h4>NOTE : </h4><i>Only for Royal Enfield Bikers.</i>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Gokarna Bike Trip<h6>Kick off : <i>Jan-12-2020</i></h6></h2>
+      <h3>Organised by The Bike store, Mysore.</h3>
+      <p>This trip is open for all the bikers and all types of bikes. We will be starting our journey from our Mysore Source point to gokarna. The route will be 
+        via madikeri, manglore, udupi and yaana. The to and fro trip will include 6 days and 5 nights. All the necessary arrangements from food to stay and other activities will be organized by the organizer.
+        The Expense of this trip will be 30,000 INR. For more necessary details visit our Mysore store. </p>
+      <p>Intrested people can visit our store and enroll with the necessary documents asap.<br/>As we have limited number of seats.</p>
+    </div>
+  </div>
+ </div>
+
+ <div class="w3-container w3-white w3-center w3-padding-16" style="max-width:2000px" id="aboutus">
+ </div>
+
+ <div class="w3-container w3-black w3-content w3-center w3-padding-16" style="max-width:1000px" id="aboutus">
+    <h2 class="w3-wide">Gallery</h2>   
+    <p class="w3-opacity"><i>Some of our Event photographs</i></p>   
+    <p></p>
+ <div class="w3-third">
+    <p>Leh - 2019</p>
+    <img src="static/images/kash1.jpg" class="w3-round w3-margin-bottom" alt="Leh" style="width:60%">
+    <p>Kashmir - 2019</p>
+    <img src="static/images/kash2.jpg" class="w3-round w3-margin-bottom" alt="Kashmir" style="width:60%">
+    <p>Kashmir - 2018</p>
+    <img src="static/images/kash3.jpg" class="w3-round w3-margin-bottom" alt="Kashmir" style="width:60%">
+ </div>
+ <div class="w3-third">
+    <p>Harley meetup - New Delhi</p>
+    <img src="static/images/harley1.jpg" class="w3-round w3-margin-bottom" alt="Harley New Delhi" style="width:60%">
+    <p>Harley meetup - Mumbai</p>
+    <img src="static/images/harley2.jpg" class="w3-round w3-margin-bottom" alt="Harley Mumbai" style="width:60%">
+    <p>Harley meetup - Goa</p>
+    <img src="static/images/harley3.jpg" class="w3-round w3-margin-bottom" alt="Harley Goa" style="width:60%">
+ </div>
+ <div class="w3-third">
+    <p>Chikmaglur - 2019</p>
+    <img src="static/images/ckm1.jpg" class="w3-round w3-margin-bottom" alt="Chikmaglur" style="width:60%">
+    <p>Ooty - 2019</p>
+    <img src="static/images/ckm2.jpg" class="w3-round w3-margin-bottom" alt="Ooty" style="width:60%">
+    <p>Coorg - 2019</p>
+    <img src="static/images/ckm3.jpg" class="w3-round w3-margin-bottom" alt="Coorg" style="width:60%">
+ </div>
+ <div class="w3-third">
+    <p>Calicut - 2019</p>
+    <img src="static/images/goa1.jpg" class="w3-round w3-margin-bottom" alt="Calicut" style="width:60%">
+    <p>Goa -2018</p>
+    <img src="static/images/goa2.jpg" class="w3-round w3-margin-bottom" alt="Goa" style="width:60%">
+    <p>KTM meetup - 2018</p>
+    <img src="static/images/goa3.jpg" class="w3-round w3-margin-bottom" alt="KTm" style="width:60%">
+ </div>
+ <div class="w3-third">
+    <p>Madikeri -2019</p>
+    <img src="static/images/mad2.jpg" class="w3-round w3-margin-bottom" alt="Madikeri" style="width:60%">
+    <p>Madikeri - 2018</p>
+    <img src="static/images/mad3.jpg" class="w3-round w3-margin-bottom" alt="madikeri" style="width:60%">
+    <p>Ahemdabad - 2018</p>
+    <img src="static/images/mad1.jpg" class="w3-round w3-margin-bottom" alt="Ahemdabad" style="width:60%">
+  </div>
+  <div class="w3-third">
+    <p>Kawasaki Delhi - 2019</p>
+    <img src="static/images/kawasaki.jpg" class="w3-round w3-margin-bottom" alt="Kawasaki New delhi" style="width:60%">
+    <p>Dominor Leh - 2108</p>
+    <img src="static/images/dominor.jpg" class="w3-round w3-margin-bottom" alt="Dominor" style="width:60%">
+    <p>RE 350 meetup - 2017</p>
+    <img src="static/images/royal.jpg" class="w3-round w3-margin-bottom" alt="Royal Enfield" style="width:60%">
+  </div>
+ </div>
+ 
+ <footer class="w3-container w3-padding-64  w3-center w3-orange">
+    <h4>Follow Us</h4>
+    <a class="w3-button w3-large w3-black" href="https://www.facebook.com/niebikershop" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <!-- <a class="w3-button w3-large w3-black" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-black" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a> -->
+    <a class="w3-button w3-large w3-black" href="https://www.instagram.com/bikerstorenie/?hl=en" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-black w3-hide-small" href="https://www.snapchat.com/add/bikestore2020" title="Snapchat"><i class="fa fa-snapchat"></i></a>
+    <p></p>
+    
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-black w3-hide-small">Go To Top</span>   
+      <a class="w3-button w3-theme" href="#top"><span class="w3-xlarge">
+      <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
+ 
+</div>
+
+<script>
+    
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+</script>
+
+</body>
+</html>

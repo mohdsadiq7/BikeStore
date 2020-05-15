@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Homepage</title>
+    <link rel="icon" href="{{url_for('static',filename='images/logo.jpg')}}" type=image/x-icon>
+    </head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.mman{
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 8px; 
+  float: right;
+}
+.right{
+  float: right;
+}
+
+
+.dropdown {
+  /* float: right; */
+  position: right;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 118px;
+  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.9);
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+  
+}
+
+</style>
+<body>
+  <body id="homepage">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-orange w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#services" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+    <a href="#aboutus" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> 
+     <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="{{url_for('artical')}}" class="w3-bar-item w3-button">Articles</a>
+        <a href="{{url_for('develop')}}" class="w3-bar-item w3-button">Developer info</a>
+        </div>
+      </div>
+      <div class="mman dropdown">
+          <span>{{value}}</span>
+          <div class="dropdown-content">
+            <!-- <p>Hello World!</p> -->
+            <a href="{{url_for('logout')}}"><button class="w3-button">LOGOUT</button></a>
+          </div>
+      </div>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="{{url_for('artical')}}" class="w3-bar-item w3-button">Articles</a>
+          <a href="{{url_for('develop')}}" class="w3-bar-item w3-button">Developer info</a>
+        </div>
+      <!-- <a href="{{url_for('login')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small ">LOGIN</a> 
+      <a href="{{url_for('signup')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SIGN UP</a>   -->
+      <!-- <a href="signup.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-display-topright">SIGN UP</a> -->
+      <!-- <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-margin-right" >LOGIN</a>  -->
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#services" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="#aboutus" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT US</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{{url_for('static',filename='images/bike.jpg')}}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>The Bike Store</h1>
+      <p><b><h2>Shop  the  Best  from  the  Best</h2></b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{{url_for('static',filename='images/b10new.jpg')}}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1>The Bike Store</h1>
+        <p><b><h2>Shop  the  Best  from  the  Best</h2></b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{{url_for('static',filename='images/b9new.jpg')}}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1>The Bike Store</h1>
+        <p><b><h2>Shop  the  Best  from  the  Best</h2></b></p>       
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="aboutus">
+        <h2 class="w3-wide">ABOUT US</h2>
+        <p class="w3-opacity"><i>We love bikes</i></p>
+        <p class="w3-justify">As today in this mordern world everyone wants to shop online no one wants to visit the stores to buy the products they need
+        but, in order to buy Bike accessories we need to visit the stores. Hence inorder to ease the work of going out and shopping the bike products we have designed this website so that you can sit and shop at home.
+        You can shop Accessories, buy customized bikes built by us and also join us in the events organized by us.<br/>
+        Specialists in bike customization of all type of models from Java to Harley. We have a lot of people with good knowledge and expertise who design and build these bikes. 
+        We have specialized tools and technologies and high class work areas and showrooms where we carry out our work.We also deal with specific accessories and riding gears from top and best companies such as,
+        Honda, TVS, KTM, Yamaha, Royal Enfield and many more.<br/>
+        For more details you can visit us to our near by stores and checkout on different customized bikes built by us and also the accessories. You can also visit our stores for teaming up with us on 
+        variours trips and events or you can drop a mail. For any collaborations with us you can drop a mail or visit our store.
+      </p>
+      <br/>
+      <h3><i>Visit our Stores at :</i></h3>         
+      <div class="w3-third">
+        <p>Bangalore</p>
+        <img src="{{url_for('static',filename='images/new3.jpg')}}" class="w3-round w3-margin-bottom" alt="Bangalore" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Mysore</p>
+        <img src="{{url_for('static',filename='images/new5.jpg')}}" class="w3-round w3-margin-bottom" alt="Mysore" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Hyderabad</p>
+        <img src="{{url_for('static',filename='images/new7.jpg')}}" class="w3-round w3-margin-bottom" alt="Hyderabad" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Mumbai</p>
+        <img src="{{url_for('static',filename='images/new8.jpg')}}" class="w3-round w3-margin-bottom" alt="Mumbai" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>New Delhi</p>
+        <img src="{{url_for('static',filename='images/new4.jpg')}}" class="w3-round w3-margin-bottom" alt="New Delhi" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Kolkata</p>
+        <img src="{{url_for('static',filename='images/new6.jpg')}}" class="w3-round w3-margin-bottom" alt="Kolkata" style="width:60%">
+      </div>
+    </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="services">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">OUR SERVICES</h2>
+      <p class="w3-opacity w3-center"><i>Don't miss out on anything</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">Chikmagalur Bike Trip<span class="w3-tag w3-red w3-margin-left">Seats Full</span></li>
+        <li class="w3-padding">Harley Goa meetup<span class="w3-tag w3-red w3-margin-left">This June 2020</span></li>
+        <li class="w3-padding">Kashmir Bike Trip <span class="w3-badge w3-right w3-margin-right">3 Seats Left</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="{{url_for('static',filename='images/accessoriesnew.jpg')}}" alt="Accessories" style="width:100%">
+          <div class="w3-container w3-orange">
+            <p><b>Accessories</b></p>
+            <p>Shop best Accessories from the best brands.</p>
+            <a href="{{url_for('student')}}"><button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Shop Now</button></a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="{{url_for('static',filename='images/g2n.jpg')}}" alt="Events" style="width:100%">
+          <div class="w3-container w3-orange">
+            <p><b>Events</b></p>
+            <p>Join us on various Events organized by us.</p>
+            <button class="w3-button w3-black w3-margin-bottom"><a href="{{url_for('events')}}">Explore</a></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="{{url_for('static',filename='images/c1n.jpg')}}" alt="Bike" style="width:100%">
+          <div class="w3-container w3-orange">
+            <p><b>Customized Bikes</b></p>
+            <p>Shop Bikes built and customized exclusively by us.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'"><a href="{{url_for('customized')}}">Shop Now</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT US</h2>
+    <p class="w3-opacity w3-center"><i>Have a Question? Drop a Mail!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Mysore, INDIA<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9876543210<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: niebikershop@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/form123" method="POST">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Question" required name="Question">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="{{url_for('static',filename='images/b6.jpg')}}" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64  w3-center w3-orange">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-black" href="https://www.facebook.com/niebikershop" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-black" href="https://www.instagram.com/bikerstorenie/?hl=en" title="Instagram"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-black w3-hide-small" href="https://www.snapchat.com/add/bikestore2020" title="Snapchat"><i class="fa fa-snapchat"></i></a>
+  <p></p>
+  
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-black w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#homepage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

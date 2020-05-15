@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessories</title>
+    <link rel="icon" href="{{url_for('static',filename='images/logo.jpg')}}" type=image/x-icon>
+  </head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+<!-- Pagination CSS  -->
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: center;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<!-- <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav> -->
+<div class="w3-top">
+  <div class="w3-bar w3-orange w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+<a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+</div>
+
+<center><h1 style="font-size: 1in;"><bold><i>Accessories</i></bold></h1></center>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+      <div class="w3-quarter">
+       <a href="{{url_for('manoj11')}}"> <img src="{{url_for('static',filename='images/1_8.jpg')}}" alt="Sandwich" style="width:105%"></a>
+        <h3>Steelbird Air SBA-3 Dashing Black with Gold Visor,600mm</h3>
+        <!-- <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj12')}}" ><img src="{{url_for('static',filename='images/1_1.jpeg')}}" alt="Steak" style="width:75%"></a>
+        <h3>H-Store Black, Red Bike Face Mask for Men & Women  (Size: Free, Balaclava)</h3>
+        <!-- <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj13')}}"><img src="{{url_for('static',filename='images/1_5.jpg')}}" alt="Cherries" style="width:97%"></a>
+        <h3>Steelbird Air SBA-2 Strength Night Vision Full Face Graphics Helmet </h3>
+        <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+        <!-- <p>What else?</p> -->
+      </div>
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj14')}}"><img src="{{url_for('static',filename='images/1_2.jpeg')}}" alt="Pasta and Wine" style="width:100%"></a>
+        <h3>CADEAU Bullet Classic Cap Bike PVC Set of 8 Headlight Grill (Black)</h3>
+        <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+    </div>
+    
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj15')}}"><img src="{{url_for('static',filename='images/1_7.jpg')}}" alt="Popsicle" style="width:100%"></a>
+        
+        <h3>Vega Atom Black Helmet-Medium</h3>
+        <!-- <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+      <div class="w3-quarter">
+        
+        <a href="{{url_for('manoj16')}}"><img src="{{url_for('static',filename='images/1_3.jpeg')}}" alt="Salmon" style="width:83%"></a>
+        <h3>Typhon Bike Handle Bar LED Turn Signal Indicators  For All Motorbikes</h3>
+        <!-- <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj17')}}"><img src="{{url_for('static',filename='images/1_4.jpeg')}}" alt="Sandwich" style="width:100%"></a>
+        <pre>
+        </pre><h3>Pa Manual Rear View Mirror For Universal For Bike Universal For Bike</h3>
+        <!-- <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+      <div class="w3-quarter">
+        <a href="{{url_for('manoj18')}}"><img src="{{url_for('static',filename='images/1_6.jpeg')}}" alt="Croissant" style="width:105%"></a>
+        
+        <h3>
+          RASIKVAR Portable Bike Pump Foot Activated Floor Pump Air Pump for and Bike</h3>
+        <!-- <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+      </div>
+    </div>
+  
+    <!-- Pagination -->
+    <!-- <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="{{url_for('student')}}" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="acc2.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="acc3.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div> -->
+ <center>
+    <div class="pagination">
+  
+      <a href="{{url_for('manojx')}}" >1</a>
+      <a href="#" class="active" >2</a>
+      <!-- <a href="#">3</a> -->
+  
+    </div>
+
+  </center>   
+    <hr id="about">
+</div>
+
+<script>
+    
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+
+</body>
+</html>

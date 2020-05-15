@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Articles</title>
+<link rel="icon" href="{{url_for('static',filename='images/logo.jpg')}}" type=image/x-icon>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;
+
+}
+
+.body
+{
+  padding:10px;
+}
+
+              * {
+                box-sizing: border-box;
+              }
+
+                      .header 
+                    {
+                        padding: 50px;
+                        text-align: center;
+                        background:wheat;
+                        border-style:solid;
+                        border-color:white;
+                        border-width:thick;
+                        
+                    }
+
+
+                    .major
+                {
+                    font-size: 20pt;
+                    font-style: italic;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-indent: 1in;
+
+                }
+
+                .majorr
+                {
+                    font-size: 15pt;
+                    font-style: italic;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-indent: 4in;
+
+                }
+
+                
+                .major1
+                {
+                    font-size: 10pt;
+                    font-style: italic;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-indent: 0.5in;
+
+                }
+
+                .majorrr
+                {
+                    font-size: 15pt;
+                    font-style: italic;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-indent: 0.5in;
+
+                }
+
+
+                .leftcolumn 
+                    {      
+                        width: 100%;
+                        border-style:solid;
+                        border-color:white;
+                        border-width:medium;
+                    }
+
+                    .leftcolumnn 
+                    {      float:left;
+                        width: 49%;
+                        border-style:solid;
+                        border-color:white;
+                        border-width:medium;
+                        background-color: lightblue;
+                    }
+                    .cardd  {
+                        background-color:lightblue;
+                        padding: 20px;
+                        
+                    }
+
+
+                    .card    {
+                        background-color:wheat;
+                        padding: 20px;
+                        
+                    }
+
+                    .card1   {
+                        background-color:lightblue;
+                        padding: 20px;
+                        
+                    }
+
+                    .img 
+                {
+                    widows: 300px;
+                    height:900px;
+                    background-image: url(static/images/art1.jpg);
+                    /* background-image: {{url_for('static',filename='images/b10new.jpg')}}; */
+                    background-size:cover;
+                  
+                }
+
+                .border
+               {
+                   border-style:dashed;
+                   border-top-color: orangered;
+                   border-bottom-color: orangered;
+                   border-left-color: darkgreen;
+                   border-right-color: darkgreen;
+                   border-width:medium ;
+
+               }
+
+               .row:after 
+                {
+                        content: "";
+                        display: table;
+                        clear: both;
+                }
+
+            .rightcolumn 
+                {
+                        float: right;
+                        width: 49%;
+                        background-color:lightblue;
+                        padding-left: 20px;
+                        border-style:solid;
+                        border-color:lightblue;
+                        border-width:medium;
+                
+                }
+
+                .immg 
+                {
+                    widows: 600px;
+                    height:300px;
+                    background-image: url(static/images/art2.jpg);
+                    background-size: cover;
+                    background-repeat:no-repeat ;
+                }
+
+                .immmg 
+                {
+                    widows: 600px;
+                    height:300px;
+                    background-image: url(static/images/art3.jpg);
+                    background-size:cover;
+                    background-repeat:repeat ;
+                }
+
+                .a
+                {
+                  text-align: center;
+                  font-family: 'Times New Roman', Times, serif;
+                }
+
+</style>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-orange w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="{{url_for('homepage')}}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <div class="body">
+      <div class="header">
+        <h1>Articles</h1>
+        <p><h3><i>Bike store website provide you with some of the finest articles from the web</i></h3></p>
+      </div>
+      <p class="major" >So here are some of the finest articles written by some of the great and good bikers. The sole purpose of this page is to fetch some of the finest articles from the web 
+      and get them to the users who are accessing this website. You can experience some of the finest quotes by some of the finest authors regarding bikes, biking, riders.
+      there are also quite a details on the evolution and history of the motorcycles. And some of the quite fascinating and interesting details and facts that we hope you would 
+      all love.</p>
+      
+      <div class="leftcolumn">
+        <div class="card">
+            <div class="a"><h1>HISTORY</h1></div>
+            <h3>Wrtten by :  George C. Cromer</h3>
+            <div class="img" >
+              <!-- <img src="{{url_for('static',filename='images/art1.jpg')}}" class="img"> -->
+            </div>
+            <p class="majorr" >An early motorcycle, c. 1900.
+              Library of Congress, Washington, D.C. (digital. id. ggbain 071)</p>
+            <p><h3>Description :</h3>
+              Just as the automobile was the answer to the 19th-century dream of self-propelling the horse-drawn carriage, the invention of the motorcycle created the self-propelled bicycle. The first commercial design was a three-wheeler built by Edward Butler in Great Britain in 1884. 
+              It employed a horizontal single-cylinder gasoline engine mounted between two steerable front wheels and connected by a drive chain to the rear wheel.
+              By 1900 many manufacturers were converting bicycles—or pedal cycles, as they were sometimes called—by adding small, centrally mounted spark ignition engines. The need for reliable constructions led to road motorcycle trial tests and competition between manufacturers. The original Tourist Trophy motorcycle races were held on the Isle of Man in 1907 as reliability or endurance races. 
+              Such events have been the proving ground for many new ideas from early two-stroke-cycle designs to supercharged, multivalve engines mounted on aerodynamic, carbon-fibre reinforced bodywork. </p>
+        </div>
+      </div>
+      <br>
+      <div class="border">      
+        <p ><h1>Did You Know ?</h1></p>
+        <p class="majorrr"> Mrs. Sally Halterman, from Washington D.C., was the first woman to be issued a license to ride a motorcycle in the year 1937.<br/>
+            Riding a motorcycle involves handling a curious collection of various elements like noise, danger, speed, balance, physical skill, and mechanics. 
+            It is not surprising then that some people are obsessed with motorcycles, wind blowing across their faces, following the road, feeling free and wild. 
+            You can instantly recognize a motorcyclist because of his/her signature leather jacket, swanky helmet, leather gloves, and of course, his/her beautiful machine.
+            Riding a bike can be a thrilling and wonderful experience, it can symbolize control, can put your mind at ease, 
+            and on a more practical note, a bike can easily get you out of any traffic jam. Plus, imagine all the attention you get if you are riding a sexy bike!</p>
+        <br/>
+      </div>
+      <br>
+      <br>
+      <div class="a"><h1>EVOLUTION </h1></div>
+        <h4>When it comes to the machinery every one expects them over a varied types. The motor cycles have been evoled from a wanky type to a most class look.
+        The motor cycles build in late 20th century were huge and less powerful. The bikes that we are building now are cost effective smaller in size and very powerful.
+        Here is the evolution of the ducati bikes from their first use in the swiss army to their different variety of varients in the markets.</h4>
+      <div class="row">
+        <div class="leftcolumnn">
+          <div class="cardd">
+                <h2>The New Ducati</h2>
+                <div class="immmg" ></div>
+                <p class="major1" >The new Ducati Multistrada 1200, Built for the purpose of offroading and mountain biking.</p>
+          </div>
+        </div>
+        
+        <div class="rightcolumn">
+            <div class="cardd">
+              <h2>The Old Ducati</h2>
+              <div class="immg"></div>
+              <p class="major1" >Ducati Condor motorcycle, originally built for service in the Alps with the Swiss Army.</p>
+            </div> 
+        </div>
+      </div>
+
+        <br>
+      <div class="card">
+        <div class="a"><h1>COMPONENTS</h1></div>
+        <h4>Motorcycles are produced with both two-stroke- and four-stroke-cycle engines and with up to four cylinders. 
+          Most are air-cooled, though a few are water-cooled. Engines are generally limited to displacements of about 1,800 cc. 
+          The smallest designs, termed mopeds (from “motor pedal”), have very small engines (50 cc) with fuel economies of as much as 2.4 litres per 100 km (100 miles per gallon). Such units are not permitted on limited-access public roads because of their low speed capability. 
+          In order of increasing power capacity and engine displacements, the other five classifications are child bikes, trail bikes, road bikes, touring bikes, and racing bikes. A subcategory of racing bikes is known as superbikes. 
+          These are motorcycles that displace more than 900 cc and in which the seat is tilted forward so that the rider is hunched over the frame, creating a more aerodynamic profile.
+          The motorcycle frame is often of steel, usually a combination of tubes and sheets. The wheels are generally aluminum or steel rims with spokes, although some cast wheels are used. 
+          Graphite, composite, and magnesium parts are increasingly in use because of their high strength-to-weight characteristics. Tires are similar to those used on automobiles but are smaller and rounded to permit leaning to lower the centre of gravity in a turn without losing traction. 
+          The gyroscopic effect of motorcycle wheels rotating at high speed significantly improves stability and cornering ability. Inertia and steering geometry are also significant factors. 
+          Front-wheel suspension is provided by coil springs on a telescopic fork; rear-wheel springs are often mounted on shock absorbers similar to those used in automobiles.
+          The clutch and throttle, which control engine speed, are operated by twist-type controls on the handgrips.
+          The front-wheel brake is controlled by a lever near the handgrip; the rear-wheel brake is engaged by a foot pedal. Except on very small machines, the front brake is usually of the hydraulic disc type. 
+          The rear brake may be disc or drum. The kick starter has been mostly replaced by an electric push-button starter.</h4>
+      </div>
+        <br>
+      <div class="card1">
+        <div class="a"><h1>EMISSION STANDARDS</h1></div>
+        <h4>Tailpipe emissions standards for motorcycles continue to be strengthened. 
+          In 1980 the U.S. Environmental Protection Agency (EPA) first regulated new motorcycle hydrocarbon emissions, requiring motorcycles to emit less than 5.0 grams per km (0.3 ounce per mile) of highway driving. California and the European Union (EU) imposed stricter limits on hydrocarbons and added restrictions on nitric oxides and carbon monoxide.
+          In 2006 emissions from new motorcycles sold in the United States were limited to a combined 1.4 grams of hydrocarbons and nitric oxides and 12.0 grams of carbon monoxide per km. The EPA decreased the limit on combined emissions of hydrocarbons and nitric oxides to 0.8 gram in 2010. 
+          The EU reduced emissions from new motorcycles in 2004 to 1.0 gram of hydrocarbons, 0.3 gram of nitric oxides, and 5.5 grams of carbon monoxide per km; in 2007 these levels were further reduced to 0.3 gram of hydrocarbons, 0.15 gram of nitric oxides, 
+          and 2.0 grams of carbon monoxide per km. The EU did a further emission reduction in 2016 to 0.17 gram of hydrocarbons, 0.09 gram of nitric oxides, and 1.14 grams of carbon monoxide, with a further reduction to 0.1 gram of hydrocarbons, 0.06 gram of nitric oxides, and 1 gram of carbon monoxide planned for 2020. Although U.S. 
+          limits for carbon monoxide were not lowered by law, the required reductions in other pollutants effectively lowered carbon monoxide emissions in fact. 
+          In order to meet these “clean-air regulations,” manufacturers installed more sophisticated catalytic converters and fuel-injection systems.</h4>
+      </div>
+
+
+
+
+
+  </div>  
+</div>
+
+
+<script>
+    
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+</script>
+</body>
+</html>
