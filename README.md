@@ -2,7 +2,7 @@
 A Bike Accessories and customized bikes shopping website built using HTML, CSS, JavaScript and Flask.
 
 Clone the repository on desktop
-
+ 
 open command prompt,
 Download Python3 or above in your system
 download PiP3 from the command Prompt
