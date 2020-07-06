@@ -17,4 +17,4 @@ After Downloading all the libraries, get into the cloned folder from command pro
 Run the python file using 
 >python connect.py
 
-The website will be hosted using the local host on your system.
+The website will be hosted using the local host on your system. 
